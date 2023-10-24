@@ -1,0 +1,31 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 98vh;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid rgba(220, 29, 29, 0.916);
+}
+
+.App-header img {
+  width: 12rem;
+}
+
+.App-header h1 {
+  color: rgba(220, 29, 29, 0.916);
+  font-weight: 900;
+}
+
+.App-body {
+  padding: 1.5rem;
+  margin-bottom: auto;
+}
+
+.App-footer {
+  margin-top: auto;
+  border-top:3px solid rgba(220, 29, 29, 0.916);
+  text-align: center;
+}
