@@ -1,4 +1,4 @@
-import holberton from '../src/holberton.jpg'
+import holberton from './holberton.jpg'
 import './App.css';
 
 function App() {
