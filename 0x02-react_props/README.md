@@ -1,0 +1,1 @@
+The concept of <b>Props</b> in React
