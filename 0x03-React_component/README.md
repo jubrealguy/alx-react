@@ -1,0 +1,1 @@
+Concepts of Classes in React, Concept of Higher order components (HOC) also
