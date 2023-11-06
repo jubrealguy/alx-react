@@ -5,14 +5,17 @@ class BodySection extends Component {
         const { title, children } = this.props
 
         return (
-            <React.Fragment>
-                <div className='bodySection'>
-                    <h2>{title}</h2>
-                    {children}
-                </div>
-            </React.Fragment>
+            <div className='bodySection'>
+                <h2>{title}</h2>
+                {children}
+            </div>
         )
     }
 }
+
+BodySection.propTypes = {
+    title: PropTypes.string.isRequired,
+    children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+};
 
 export default BodySection
