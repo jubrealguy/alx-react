@@ -7,6 +7,7 @@ import CourseList from '../CourseList/CourseList'
 import Footer from '../Footer/Footer'
 import "./App.css";
 import { getLatestNotification } from "../utils/utils";
+import BodySectionWithMarginBottom from "../BodySection/BodySectionWithMarginBottom"
 
 class App extends React.Component {
   
@@ -37,6 +38,8 @@ class App extends React.Component {
     document.removeEventListener("keydown", this.handleKeyDown)
   }
 
+  const 
+
   render () {
     return (
       <React.Fragment>
@@ -45,7 +48,15 @@ class App extends React.Component {
             <Notifications listNotifications={this.listNotifications} />
             <Header />
           </div>
-          {this.props.isLoggedIn ? <CourseList listCourses={this.listCourses} /> : <Login />}
+          {this.props.isLoggedIn ? (
+            <BodySectionWithMarginBottom title='Course List'>
+              <CourseList listCourses={this.listCourses} />
+            </BodySectionWithMarginBottom>
+          ) : (
+            <BodySectionWithMarginBottom title='Log in to continue'>
+              <Login />
+            </BodySectionWithMarginBottom>
+          )}
           <Footer />
         </div>
       </React.Fragment>

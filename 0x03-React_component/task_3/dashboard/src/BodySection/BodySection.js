@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from "prop-types";
 
 class BodySection extends Component {
     render() {
@@ -8,6 +9,7 @@ class BodySection extends Component {
             <div className='bodySection'>
                 <h2>{title}</h2>
                 {children}
+                <p title='News from the School'>a paragraph with some random text</p>
             </div>
         )
     }
