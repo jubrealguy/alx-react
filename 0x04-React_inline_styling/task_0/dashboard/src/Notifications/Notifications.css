@@ -1,0 +1,24 @@
+.Notifications {
+  padding: .4em 1em;
+  border: 2px dashed red;
+  position: relative;
+}
+
+.Notifications button img {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+li[data-notification-type="default"] {
+  color: blue;
+}
+
+li[data-notification-type="urgent"], [data-urgent] {
+  color: red;
+}
+
+.noti {
+  flex: 0 0 40%;
+}
+
