@@ -12,7 +12,13 @@ import { StyleSheet, css } from 'aphrodite';
 const styles = StyleSheet.create({
   flex: {
     display: 'flex',
-  }
+  },
+  App: {
+    height: "100vh",
+    maxWidth: "100vw",
+    position: "relative",
+    fontFamily: "Arial, Helvetica, sans-serif",
+  },
 })
 
 class App extends React.Component {
@@ -31,6 +37,7 @@ class App extends React.Component {
 
   handleKeyDown(e) {
     if (e.ctrlKey && e.Key === 'h') {
+      e.preventDefault()
       alert("Logging you out")
       this.props.logOut()
     }
@@ -49,7 +56,7 @@ class App extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <div className="App">
+        <div className={css(styles.App)}>
           <div className={css(styles.flex)}>
             <Header />
             <Notifications listNotifications={this.listNotifications} />
