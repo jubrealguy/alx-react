@@ -9,18 +9,6 @@ import { getLatestNotification } from "../utils/utils";
 import BodySectionWithMarginBottom from "../BodySection/BodySectionWithMarginBottom"
 import { StyleSheet, css } from 'aphrodite';
 
-const styles = StyleSheet.create({
-  flex: {
-    display: 'flex',
-  },
-  App: {
-    height: "100vh",
-    maxWidth: "100vw",
-    position: "relative",
-    fontFamily: "Arial, Helvetica, sans-serif",
-  },
-})
-
 class App extends React.Component {
   
   listCourses = [
@@ -51,7 +39,6 @@ class App extends React.Component {
     document.removeEventListener("keydown", this.handleKeyDown)
   }
 
-  const 
 
   render () {
     return (
@@ -75,8 +62,19 @@ class App extends React.Component {
       </React.Fragment>
     );
   }
-
 }
+
+const styles = StyleSheet.create({
+  flex: {
+    display: 'flex',
+  },
+  App: {
+    height: "100vh",
+    maxWidth: "100vw",
+    position: "relative",
+    fontFamily: "Arial, Helvetica, sans-serif",
+  },
+})
 
 App.defaultProps = {
   isLoggedIn: false,
