@@ -4,6 +4,8 @@ import { StyleSheet, css } from "aphrodite";
 import { AppContext, logOut, user } from "../App/AppContext";
 
 const Header = () => {
+    const { user, logOut } = useContext(AppContext)
+
     return (
         <>
             <div className={css(styles.Appheader)}>
@@ -38,7 +40,11 @@ const styles = StyleSheet.create({
     img: {
         width: '200px',
         height: '200px',
-    }
+    },
+
+    greeting: {
+        marginTop: "1rem",
+    },
 })
 
 export default Header
