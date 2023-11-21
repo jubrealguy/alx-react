@@ -1,5 +1,5 @@
 import { Map } from 'immutable';
 
-export default function getImmutableObject(object) {
-  Map(object)
-}
+const getImmutableObject = (object) => Map(object);
+
+export default getImmutableObject;
