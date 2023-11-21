@@ -1,3 +1,5 @@
-import { List } from 'immutable';
+import { Map } from 'immutable';
 
-export const mergeDeeplyElements = (page1, pge2)
+export const mergeDeeplyElements = (page1, page2) => {
+  return Map(page1).mergeDeep(Map(page2));
+}
